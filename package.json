@@ -1,0 +1,44 @@
+{
+  "name": "electron-js",
+  "version": "1.0.0",
+  "description": "Electron Multi-Page Application",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron .",
+    "build": "electron-builder --win --x64",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "build": {
+    "appId": "com.electronjs.app",
+    "productName": "Electron Login App",
+    "directories": {
+      "output": "dist"
+    },
+    "files": [
+      "**/*",
+      "assets/**/*",
+      "pages/**/*",
+      "node_modules/**/*"
+    ],
+    "win": {
+      "target": [
+        {
+          "target": "portable",
+          "arch": ["x64"]
+        }
+      ]
+    }
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "electron": "^27.1.0",
+    "electron-builder": "^24.9.1",
+    "electron-packager": "^17.1.2"
+  },
+  "dependencies": {
+    "@fortawesome/fontawesome-free": "^6.7.1",
+    "bootstrap": "^5.3.3"
+  }
+}
